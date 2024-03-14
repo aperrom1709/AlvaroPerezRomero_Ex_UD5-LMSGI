@@ -3,21 +3,19 @@
   <html>
   <body>
     <h2> Nombre y apellidos: Alvaro Perez Romero</h2>
-    <table>
+    <list >
       <tr bgcolor="#887788">
         
       </tr>
-      <xsl:for-each select="bib/book">
-        <xsl:sort select="year" data-type="number" order="ascending"/>
+      <xsl:for-each select="ies/ciclos/ciclo">
+      <xsl:sort select="id" data-type="number" order="ascending"/>
         <tr>
-          <td><xsl:value-of select="title"/></td>
-          <td><xsl:value-of select="author"/></td>
-          <td><xsl:value-of select="publisher"/></td>
-          <td><xsl:value-of select="year"/></td>
+          <td><p></p><xsl:value-of select="nombre"/></td>
+          
           
         </tr>
       </xsl:for-each>
-    </table>
+    </list>
   </body>
   </html>
 </xsl:template>
